@@ -1,0 +1,162 @@
+html,
+body {
+  margin: 0.5%;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.1fr 4fr 3fr 0.2fr 4fr 1fr 5fr 2.5fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "title title title title"
+    "carousel carousel carousel carousel"
+    "about about photo photo"
+    "recom recom recom recom"
+    "visit breakfast lunch-dinner coffee"
+    "extra extra extra extra"
+    "map map map map"
+    "top1 top1 top2 top2";
+}
+
+/* -------------------Global styles ---------------*/
+a {
+  color: #551a8b;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* -----------x--------Global style ------x---------*/
+/* -------------------Navigation ---------------*/
+.nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: inset;
+}
+
+nav .main-logo a {
+  font-family: "Yellowtail", cursive;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+nav .main-logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-items .nav-link a {
+  /* padding: 15px 55px; */
+  transition: 1s;
+  font-family: "Flamenco", cursive;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.nav-items {
+  display: inline-flex;
+}
+
+.media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media-icons a {
+  padding: 5px 10px;
+}
+.fab {
+  font-size: 1.5em;
+}
+/* -- -- X Navigation X -- -- */
+/* -- --- Title -- --- */
+.title {
+  grid-area: title;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  border-bottom: inset;
+
+  /* font-family: "Caveat", cursive; */
+  /* font-family: "Cookie", cursive; */
+  /* font-family: "Great Vibes", cursive; */
+  /* font-family: "Marcellus SC", serif; */
+  /* font-family: "Parisienne", cursive; */
+  /* font-family: "Sacramento", cursive; */
+  /* font-family: "Satisfy", cursive; */
+  /* font-family: "Yellowtail", cursive; */
+}
+.title h1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: #c9ccd3;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-blend-mode: lighten;
+  letter-spacing: 3px;
+}
+/* -- -- X Tittle -- -- */
+/* --------------------carousel -------------- */
+.carousel {
+  grid-area: carousel;
+}
+
+.carousel-item img {
+  width: 100%;
+  object-fit: cover;
+}
+/* ----------------X carousel X --------------- */
+.about {
+  background: purple;
+  grid-area: about;
+}
+.photo {
+  background: rgb(137, 137, 170);
+  grid-area: photo;
+}
+.recom {
+  background: rgb(4, 90, 23);
+  grid-area: recom;
+}
+.visit {
+  background: rgb(57, 115, 153);
+  grid-area: visit;
+}
+
+.breakfast {
+  background: red;
+  grid-area: breakfast;
+}
+.lunch-dinner {
+  background: rgb(187, 40, 114);
+  grid-area: lunch-dinner;
+}
+.coffee {
+  background: khaki;
+  grid-area: coffee;
+}
+.extra {
+  background: pink;
+  grid-area: extra;
+}
+.map {
+  grid-area: map;
+}
+.top1 {
+  background: gold;
+  grid-area: top1;
+}
+.top2 {
+  background: brown;
+  grid-area: top2;
+}
