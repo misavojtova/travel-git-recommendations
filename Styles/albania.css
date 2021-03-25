@@ -1,0 +1,95 @@
+.back-img {
+  background-image: url(/img/abs4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.effect {
+  font-weight: bold;
+}
+
+.effect:hover {
+  color: rgb(255, 78, 78);
+  font-weight: bold;
+}
+
+.header-wrapper {
+  background-color: white;
+  opacity: 60%;
+  max-width: 1000px;
+  width: 90%;
+  height: 40vh;
+  display: table;
+}
+.header-wrapper h3 {
+  display: table-cell;
+  vertical-align: middle;
+  color: #821818;
+  font-family: "Flamenco", cursive;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 4.2vh;
+  line-height: 12vh;
+  letter-spacing: 2vw;
+}
+.center-dotted-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+}
+
+/* ////////////// Doted box /////////// */
+
+.dotted-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  height: 30vh;
+  border: 0.8vh #fad7d77a;
+  border-style: dotted solid double dashed;
+  border-radius: 2vh;
+}
+
+.btn {
+  font-family: "Flamenco", cursive;
+  background-color: #fbd6d6;
+  border: none;
+  height: 12vh;
+  width: 26vw;
+  letter-spacing: 2px;
+  border-radius: 2vh;
+}
+
+.btn a {
+  font-size: clamp(20px, 2vw, 30px);
+}
+
+.centered-gallery-explore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.gallery-box {
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  background-color: blue;
+}
+
+.img-v {
+  height: auto;
+  width: 150px;
+}
+
+.img-h {
+  height: auto;
+  width: 100vw;
+}

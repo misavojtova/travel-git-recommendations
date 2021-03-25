@@ -1,28 +1,24 @@
 html,
 body {
-  margin: 0.5%;
+  margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.con {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* grid-template-rows: 0.5fr 0.5fr 2fr 3fr 0.2fr 4fr 1fr 5fr 2.5fr; */
-
-  grid-template-rows: 5% 3% 30% 25% 50px 50px 50px 400px 50px;
-  grid-template-areas:
-    "nav nav nav nav"
-    "title title title title"
-    "carousel carousel carousel carousel"
-    "about about photo photo"
-    "recom recom recom recom"
-    "visit breakfast lunch-dinner coffee"
-    "extra extra extra extra"
-    "map map map map"
-    "top1 top1 top2 top2";
+body::-webkit-scrollbar {
+  width: 1.1rem;
 }
 
-/* -------------------Global styles ---------------*/
+body::-webkit-scrollbar-thumb {
+  background: #aa7776a1;
+}
+
+body::-webkit-search-results-button {
+  height: 10vh;
+}
+
+/* --- --- --- --- -- Global styles --- --- --- --- -- */
+
 a {
   color: #551a8b;
   text-decoration: none;
@@ -31,169 +27,176 @@ a {
 ul {
   list-style-type: none;
 }
-h1 {
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+h2 {
   margin: 0;
 }
-/* -----------x--------Global style ------x---------*/
-/* -------------------Navigation ---------------*/
+/* --- --- X --- X -- Global styles --- --- X --- X -- */
+/* --- --- --- --- -- Navigation --- --- --- --- -- */
 .nav {
-  grid-area: nav;
-  display: flex;
+  min-height: 10vh;
+  height: 0;
+  overflow: hidden;
+  padding: 0rem 1rem;
+  transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
   justify-content: space-between;
-  border-bottom: inset;
+  position: relative;
 }
 
-nav .main-logo a {
+.nav .nav-brand a {
+  font-size: 1.6rem;
+  padding: 1.4rem 0;
+  display: block;
   font-family: "Yellowtail", cursive;
-  font-size: 160%;
 }
 
-nav .main-logo {
+.nav .nav-items {
+  margin: 0;
   display: flex;
-  align-items: center;
+  padding: 0;
 }
 
-nav .nav-items .nav-link a {
+/* Why relative? */
+.nav .nav-items .nav-link {
+  padding: 1.9rem 1rem;
+  font-size: 1.1rem;
+  position: relative;
   font-family: "Flamenco", cursive;
   font-weight: bold;
-  font-size: 110%;
+  text-align: center;
 }
 
-.nav-items li {
-  list-style-type: none;
-  margin: 10px;
+.nav .social {
+  padding: 1.6rem 0rem;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
-.nav-items {
+.nav .social a {
+  padding: 0 0.2rem;
+}
+
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  cursor: pointer;
+  display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+  padding: 1.6rem 0rem;
 }
 
-.media-icons {
+.nav .toggle-collapse .toggle-icons i {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.collapse {
+  height: 30rem;
+}
+
+/* --- --- X --- X -- Navigation --- --- X --- X -- */
+
+/* --- --- --- --- -- Title--- --- --- --- -- */
+
+.title {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.media-icons a {
-  padding: 5px 10px;
-  font-size: 130%;
-}
-/* .fab {
-  font-size: 1.5em;
-} */
-/* -- -- X Navigation X -- -- */
-/* -- --- Title -- --- */
-.title {
-  grid-area: title;
+  height: 5vh;
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: inset;
-  background: #f2e5ff;
-
-  /* font-family: "Caveat", cursive; */
-  /* font-family: "Cookie", cursive; */
-  /* font-family: "Great Vibes", cursive; */
-  /* font-family: "Marcellus SC", serif; */
-  /* font-family: "Parisienne", cursive; */
-  /* font-family: "Sacramento", cursive; */
-  /* font-family: "Satisfy", cursive; */
-  /* font-family: "Yellowtail", cursive; */
-}
 .title h1 {
+  color: rgba(203, 207, 198, 1);
   font-size: 1rem;
   text-transform: uppercase;
-  /* background-image: linear-gradient(
-    -180deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-  background-blend-mode: lighten; */
   letter-spacing: 3px;
 }
-/* -- -- X Tittle -- -- */
-/* --------------------carousel -------------- */
-.carousel {
-  grid-area: carousel;
-  height: auto;
-  display: flex;
-  align-items: center;
+/* --- --- X --- X -- Title --- --- X --- X -- */
+/* --- --- --- --- -- Image- --- --- --- -- */
+
+.banner-img {
+  height: 60vh;
+  width: 100%;
+  background-image: url(/img/new.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
 }
+
+/* --- --- X --- X -- Image --- --- X --- X -- */
+/* --- --- --- -- Gallery --- --- ---  --- ----*/
+.box-wrapper {
+  margin: 1% 1%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.wrapper-img {
+  position: relative;
+}
+
+.img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+}
+
+.subtitle {
+  position: absolute;
+  color: black;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* --- --- X --- --- -- Gallery --- --- X --- --- -- -- --*/
+/* --- --- --- --- -- About us section --- --- --- --- -- */
+
+/* --- --- X --- X -- About us section--- --- X --- X -- */
+
+/* --- --- --- --- -- Carousel --- --- --- --- -- */
+
 .owl-dots {
   display: none;
 }
 
+.owl-theme {
+  margin-bottom: 5rem;
+}
+
 .item img {
-  height: 300px;
-  width: 100%;
+  height: 50vh;
+  object-fit: cover;
 }
 
-/* ----------------X carousel X --------------- */
-/* ----------------About us section --------------- */
-.about {
-  padding: 5%;
-  background: #f2e5ff;
-  grid-area: about;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70% 15% 15%;
-  grid-template-areas:
-    "about-content"
-    "abt-us"
-    "btn-more";
-}
-.about-content {
-  grid-area: about-content;
-}
+/* --- --- X --- X -- Carousel--- --- X --- X -- */
 
-.abt-us {
-  grid-area: abt-us;
-}
-.btn-more {
-  grid-area: btn-more;
-}
-/* ----------------X About us section X --------------- */
+/* Media queries Viewport less then or equal to 800px */
 
-.photo {
-  background: rgb(137, 137, 170);
-  grid-area: photo;
-}
-.recom {
-  background: rgb(4, 90, 23);
-  grid-area: recom;
-}
-.visit {
-  background: rgb(57, 115, 153);
-  grid-area: visit;
-}
+@media only screen and (max-width: 800px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
 
-.breakfast {
-  background: red;
-  grid-area: breakfast;
-}
-.lunch-dinner {
-  background: rgb(187, 40, 114);
-  grid-area: lunch-dinner;
-}
-.coffee {
-  background: khaki;
-  grid-area: coffee;
-}
-.extra {
-  background: pink;
-  grid-area: extra;
-}
-.map {
-  grid-area: map;
-}
-.top1 {
-  background: gold;
-  grid-area: top1;
-}
-.top2 {
-  background: brown;
-  grid-area: top2;
+  .nav .toggle-collapse {
+    display: initial;
+  }
 }
