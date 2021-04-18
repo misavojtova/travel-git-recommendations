@@ -20,7 +20,6 @@ body::-webkit-search-results-button {
 /* --- --- --- --- -- Global styles --- --- --- --- -- */
 
 a {
-  color: #551a8b;
   text-decoration: none;
 }
 
@@ -56,6 +55,7 @@ h2 {
   padding: 1.4rem 0;
   display: block;
   font-family: "Yellowtail", cursive;
+  color: #551a8b;
 }
 
 .nav .nav-items {
@@ -74,6 +74,13 @@ h2 {
   text-align: center;
 }
 
+.nav .nav-items .nav-link a {
+  color: #551a8b;
+}
+.nav .nav-items .nav-link a:hover {
+  color: #ffdf00;
+}
+
 .nav .social {
   padding: 1.6rem 0rem;
   font-size: 1.4rem;
@@ -82,6 +89,10 @@ h2 {
 
 .nav .social a {
   padding: 0 0.2rem;
+}
+
+.social a {
+  color: #ffdf00;
 }
 
 .nav .toggle-collapse {

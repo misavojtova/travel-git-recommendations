@@ -1,5 +1,5 @@
 .back-img {
-  background-image: url(/img/abs4.jpg);
+  background-image: url(/img/clock_tower.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 70vh;
@@ -9,18 +9,14 @@
   align-items: center;
 }
 
-.effect {
-  font-weight: bold;
-}
-
-.effect:hover {
-  color: rgb(255, 78, 78);
+.hover-effect {
+  color: #ffdf00;
   font-weight: bold;
 }
 
 .header-wrapper {
   background-color: white;
-  opacity: 60%;
+  opacity: 70%;
   max-width: 1000px;
   width: 90%;
   height: 40vh;
@@ -29,7 +25,7 @@
 .header-wrapper h3 {
   display: table-cell;
   vertical-align: middle;
-  color: #821818;
+  color: #551a8b;
   font-family: "Flamenco", cursive;
   text-align: center;
   font-weight: bolder;
@@ -37,14 +33,15 @@
   line-height: 12vh;
   letter-spacing: 2vw;
 }
+
+/* ////////////// Doted box /////////// */
 .center-dotted-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45vh;
+  height: auto;
+  width: 100%;
 }
-
-/* ////////////// Doted box /////////// */
 
 .dotted-box {
   display: flex;
@@ -52,44 +49,50 @@
   align-items: center;
   width: 90vw;
   height: 30vh;
-  border: 0.8vh #fad7d77a;
+  /* border: 0.8vh #fad7d77a;
   border-style: dotted solid double dashed;
-  border-radius: 2vh;
+  border-radius: 2vh; */
 }
 
 .btn {
   font-family: "Flamenco", cursive;
-  background-color: #fbd6d6;
+  background-color: #ffdd00aa;
   border: none;
-  height: 12vh;
+  height: 30vh;
   width: 26vw;
   letter-spacing: 2px;
-  border-radius: 2vh;
+}
+
+.btn:hover {
+  background: #ffdf00;
 }
 
 .btn a {
   font-size: clamp(20px, 2vw, 30px);
 }
+/* ////////////// Doted box /////////// */
+/* ////////////// Squares /////////// */
 
-.centered-gallery-explore {
+.centered-main-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.gallery-box {
-  display: grid;
-  grid-template-columns: 30vw 30vw 30vw;
-  background-color: blue;
+.item-img {
+  margin: 5%;
 }
 
-.img-v {
-  height: auto;
-  width: 150px;
+.centered-main-box > .item-img > img {
+  max-width: 30vh;
+  display: block;
+  max-height: 30vh;
+
+  transition: ease-in-out 0.3s;
 }
 
-.img-h {
-  height: auto;
-  width: 100vw;
+.centered-main-box > .item-img > img:hover {
+  transform: scale(1.1);
 }
+
+/* ////////////// Squares /////////// */ ;
