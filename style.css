@@ -142,7 +142,7 @@ h2 {
 .banner-img {
   height: 60vh;
   width: 100%;
-  background-image: url(/img/new.jpg);
+  background-image: url(img/new.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;

@@ -19,6 +19,6 @@ section .container {
 }
 
 #nineteen {
-  background-image: url(/img/abs1.jpg);
+  background-image: url(img/abs1.jpg);
   background-position: center;
 }
